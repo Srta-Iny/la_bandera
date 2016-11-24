@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/favicon.png">
+	<title>Map - Lyft</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+	<link rel="stylesheet" href="estilo.css">
+</head>
+<body class="fondo">
+	<section>
+		<div id="modal1" class="modal">
+			<div class="modal-content center-align">
+				<h6>Verification code</h6>
+					<div>LAB-123</div>
+				</div>
+			<div class="modal-footer">
+				<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+			</div>
+		</div>
+	</section>
+<!-- mapa -->
+	<section>
+		<div id="map"></div>
+	</section>
+<!--boton next-->
+	<section>
+		<div class="container">
+			<div class="row">
+				<div  class="center-align">
+					<a class="waves-effect waves-light btn-large boton" href="payment.html">Set pickup</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg6fMEFGKsCel2qkobHwMLj_v791I2Mm0&callback=initMap"
+        async defer>
+    </script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+	<script src="js/prueba.js"></script>
+</body>
+</html>
