@@ -1,0 +1,19 @@
+#map{
+	min-height: 500px;
+}
+/*botonera propina*/
+.btn{
+	padding: 0 1.5rem;
+}
+/*Boton*/
+.next{
+	width: 250px;
+}
+.boton{
+	position: fixed;
+    bottom: 0;
+    right:0;
+	left: 0;
+	transform: translateY(0);
+	margin: 0 auto;
+}
