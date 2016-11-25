@@ -12,25 +12,14 @@
 	<link rel="stylesheet" href="estilo.css">
 </head>
 <body class="fondo">
-	<section>
-		<div id="modal1" class="modal">
-			<div class="modal-content center-align">
-				<h6>Verification code</h6>
-					<div>LAB-123</div>
-				</div>
-			<div class="modal-footer">
-				<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-			</div>
-		</div>
-	</section>
 <!-- mapa -->
 	<section>
-		<div id="floating-panel">
-	      <input id="latlng" type="text" value="">
-	      <input id="submit" type="button" value="Geocode">
-	    </div>
+		<input id="origin-input" class="controls" type="text"
+        placeholder="Enter an origin location">
+
+    	<input id="destination-input" class="controls" type="text"
+        placeholder="Enter a destination location">
 		<div id="map"></div>
-		<div id="directionsPanel"></div>
 	</section>
 <!--boton next-->
 	<section>
