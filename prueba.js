@@ -5,9 +5,10 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     mapTypeControl: false,
     center: {lat: -33.8688, lng: 151.2195},
-    zoom: 13
+    zoom: 16
   });
-   var directionsService = new google.maps.DirectionsService;
+
+  var directionsService = new google.maps.DirectionsService;
   var directionsDisplay = new google.maps.DirectionsRenderer;
   directionsDisplay.setMap(map);
 
@@ -78,5 +79,33 @@ function initMap() {
         window.alert('Directions request failed due to ' + status);
       }
     });
+  }
+  var poly = new google.maps.Polyline({
+    strokeColor: '#000000',
+    strokeOpacity: 1,
+    strokeWeight: 3,
+    map: map
+  });
+
+  // Add a listener for the click event
+  google.maps.event.addListener(map, 'click', function(event) {
+    addLatLngToPoly(event.latLng, poly);
+  });
+}
+
+/**
+ * Handles click events on a map, and adds a new point to the Polyline.
+ * Updates the encoding text area with the path's encoded values.
+ */
+function addLatLngToPoly(latLng, poly) {
+  var path = poly.getPath();
+  // Because path is an MVCArray, we can simply append a new coordinate
+  // and it will automatically appear
+  path.push(latLng);
+
+  // Update the text field to display the polyline encodings
+  var encodeString = google.maps.geometry.encoding.encodePath(path);
+  if (encodeString) {
+    document.getElementById('encoded-polyline').value = encodeString;
   }
 }
